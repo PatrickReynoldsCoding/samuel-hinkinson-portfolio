@@ -107,7 +107,7 @@ export const loadGame = () => {
       bumper(345, 250, false),
 
       // bottom link bumper
-      // bumper(225, 340, true),
+      bumper(225, 340, true),
 
       // shooter lane wall
       wall(440, 520, 20, 560, COLOUR.OUTER),

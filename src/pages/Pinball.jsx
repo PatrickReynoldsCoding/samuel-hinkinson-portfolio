@@ -18,7 +18,7 @@ export const Pinball = () => {
   return (
     <div className="wrapper">
       <div className="top-face">
-        <img src="../public/large-face-top.png" alt="" />
+        <img src="./large-face-top.png" alt="" />
       </div>
       <div className="container">
         <div className="score current-score">
