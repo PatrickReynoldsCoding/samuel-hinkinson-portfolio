@@ -3,12 +3,13 @@ import React, { useState, useEffect } from "react";
 import "./pinball.css";
 import { loadGame } from "./functions/loadGame";
 
-export default function Pinball() {
+export const Pinball = () => {
+  const [canvasTag, setCanvasTag] = useState(null);
+
   useEffect(() => {
-    const canvas = document.getElementsByTagName("canvas");
-    console.log(canvas);
-    if (canvas.length > 0) {
-      return;
+    setCanvasTag(document.getElementsByTagName("canvas")[0]);
+    if (canvasTag) {
+      console.log(canvasTag);
     } else {
       loadGame();
     }
@@ -28,4 +29,4 @@ export default function Pinball() {
       </div>
     </div>
   );
-}
+};

@@ -65,6 +65,11 @@ export const loadGame = () => {
         height: world.bounds.max.y,
         wireframes: WIREFRAMES,
         background: "transparent",
+        canvas: {
+          element: {
+            id: "myCanvas",
+          },
+        },
       },
     });
     Matter.Render.run(render);

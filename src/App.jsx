@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 import "./App.css";
 
-import Pinball from "./pages/Pinball";
+import { Pinball } from "./pages/Pinball";
 
 function App() {
   return (
