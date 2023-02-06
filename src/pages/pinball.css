@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css?family=Hind");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  color: #dee2e6;
+  background-color: #000000;
+  font-family: "Hind", sans-serif;
+  text-transform: uppercase;
+}
+.wrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  background-color: #000000;
+  height: 100vh;
+  width: 100vw;
+}
+
+.top-face {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: auto;
+  z-index: 2;
+
+  /* test */
+  /* background-color: #3908ec;
+  height: 1000px;
+  width: 50px; */
+}
+.top-face img {
+  transform: scale(1.7);
+  margin-bottom: 200px;
+}
+
+.container {
+  position: absolute;
+  bottom: 0;
+  background-color: #d89e78;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+canvas {
+  margin-left: 8%;
+  margin-bottom: 230px;
+}
+
+.score {
+  position: absolute;
+  top: 10px;
+  line-height: 1;
+}
+
+.score span {
+  font-size: 3.25rem;
+}
+
+.current-score {
+  left: 10px;
+}
+
+.high-score {
+  text-align: right;
+  right: 10px;
+}
+
+.trigger {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  bottom: 10px;
+  border: 0;
+  border-radius: 50%;
+  color: inherit;
+  background-color: #e64980;
+  text-align: center;
+  line-height: 80px;
+  font-size: 1.25rem;
+  text-transform: inherit;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none;
+}
+
+.left-trigger {
+  left: 10px;
+}
+
+.right-trigger {
+  right: 60px;
+}
+
+canvas {
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.75);
+}
+
+/* responsive scaling, because pinball tables are tall */
+/* @media (min-height: 0px) {
+  .container {
+    transform: scale(0.25);
+  }
+}
+@media (min-height: 400px) {
+  .container {
+    transform: scale(0.5);
+  }
+}
+@media (min-height: 600px) {
+  .container {
+    transform: scale(0.75);
+  }
+}
+@media (min-height: 800px) {
+  .container {
+    transform: scale(1);
+  }
+} */
