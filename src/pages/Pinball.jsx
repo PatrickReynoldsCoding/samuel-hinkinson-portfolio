@@ -1,31 +1,10 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import { Engine } from "matter-js";
+function Pinball() {
+  const scene = useRef();
+  const engine = useRef(Engine.create());
 
-import "./pinball.css";
-import { loadGame } from "./functions/loadGame";
-
-export default function Pinball() {
-  useEffect(() => {
-    const canvas = document.getElementsByTagName("canvas");
-    console.log(canvas);
-    if (canvas.length > 0) {
-      return;
-    } else {
-      loadGame();
-    }
-  }, []);
-
-  return (
-    <div className="wrapper">
-      <div className="top-face">
-        <img src="../public/large-face-top.png" alt="" />
-      </div>
-      <div className="container">
-        <div className="score current-score">
-          score
-          <br />
-          <span></span>
-        </div>
-      </div>
-    </div>
-  );
+  return <div ref={scene} style={{ width: "100%", height: "100%" }} />;
 }
+
+export default Pinball;
